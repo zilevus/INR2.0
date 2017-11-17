@@ -22,6 +22,10 @@ $(window).load(function() {
           var placScore = Math.round(s2);
           var taskScore = Math.round(s3);
           var compScore = Math.round(s4);
+
+           var avgSC;
+           avgSC = (speedScore+compScore)/2;
+           avgSC = Math.round(avgSC);
           var avg = Math.round((s1 + s2 + s3 + s4 + s5 + s6) / 6);
 
 
@@ -44,7 +48,7 @@ $(window).load(function() {
             $("#scoreContent").text("Nice try!");
           }
 
-          else if (p < 4)
+          else if (placScore < 4)
           {
             //nice Try, check placement.
             $("#scoreContent").text("Nice try! Check placement.");
@@ -76,7 +80,6 @@ $(window).load(function() {
     		console.log("scoreToValues");
     		var hex="";
     		var response="";
-  
       if (placScore >= 4 && taskScore >= 4 && avgSC >=4){
           //excelent work
           response = "Excellent work!"
