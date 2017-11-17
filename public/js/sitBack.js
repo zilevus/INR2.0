@@ -16,8 +16,9 @@ $(window).load(function() {
     //    io().emit("json", retMsg);
     // sets the exercise picture equal to necessary number
 
-    var taskSetupReq="{\"type\" : \"startRecording\"";
-    socket.emit("json", taskSetupReq+"}")
+
+		var taskSetupReq="{\"type\" : \"startRecording\",\"task\" : ";
+	  socket.emit("json", taskSetupReq+"}")
 
 	$( '#menuScreen' ).on("tap", function()
 	{
