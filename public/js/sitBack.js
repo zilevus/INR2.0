@@ -11,8 +11,8 @@ $(window).load(function() {
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 	function notify() {
-	    var startTask="{\"type\" : \"startRecording\", \"task\" : "+exerciseNum.toString()+"}";
-	    socket.emit("json", startTask);
+	    var startRecording="{\"type\" : \"startRecording\", \"task\" : "+exerciseNum.toString()+"}";
+	    socket.emit("json", startRecording);
 	}
 	// Because the first screen handles the getting of these variables in
 	// session storage we can reuse them anywhere throughout the application
