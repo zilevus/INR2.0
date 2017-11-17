@@ -29,7 +29,7 @@ $(window).load(function() {
           if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
           {
             //excelent work
-            $("#scoreContent").text("Excellent work");
+            $("#scoreContent").text("Excellent work!");
           }
 
           else if (placScore >= 4 && taskScore >= 4 && avgSC < 4)
@@ -49,7 +49,7 @@ $(window).load(function() {
             //nice Try, check placement.
             $("#scoreContent").text("Nice try! Check placement.");
           }
-          
+
 
 
 
@@ -57,7 +57,7 @@ $(window).load(function() {
           // the background color accordingly.
           var retVal = scoreToValues(avg);
           $("#scoreContent").text("Debug score:    " + retVal.response);
-          $("#scoreContentDiv").css("background-color", retVal.hex);
+          //$("#scoreContentDiv").css("background-color", retVal.hex);
 
           //$("#prep").text(scoreresponse.toString());
           //$('#noticeContent').text(scoreresponse);
