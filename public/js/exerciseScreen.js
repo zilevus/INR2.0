@@ -33,6 +33,11 @@ $(window).load(function() {
     loopNum = 1;
     exerciseNum++;
   }
+
+  if (loopNum == 1 && exerciseNum == 13)
+  {
+    window.location.assign('/studyend/');
+  }
 	$('#exerciseTitle').text("Exercise " + exerciseNum.toString());
   //exerciseNum++;
   //loopNum = parseInt(loopNum);

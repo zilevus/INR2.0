@@ -7,6 +7,8 @@ $(window).load(function() {
 
   //socket.emit("json", taskSetupReq +exerciseNum.toString()+"}")
 
+
+
   $( '#instructClick' ).on("tap", function()
   {
   console.log("instructClick.onclick");
