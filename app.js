@@ -108,12 +108,12 @@ io.on('connection', function (socket) {
     client.write(data);
   });
 
-   socket.on('startTask',function(){
+    socket.on('startTask',function(){
     client.write(startTask);
     console.log(startTask);
 
   });
-  socket.on('startRecording',function(){
+    socket.on('startRecording',function(){
     client.write(startRecording);
     console.log(startRecording);
 
