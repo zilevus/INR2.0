@@ -93,7 +93,7 @@ var disable="{\"type\" : \"request\",\"enableEvent\": false}";
 var caseConnect="{\"type\" : \"CaseConnected\"}";
 var objectplaced="{\"type\" : \"ObjectsPlaced\"}";
 var beginTask="{\"type\" : \"BeginTask\"}";
-var startRecording={\"type\" : \"startRecording\"}";
+var startRecording="{\"type\" : \"startRecording\"}";
 
 io.on('connection', function (socket) {
   //console.log("CONNECTIONS");
