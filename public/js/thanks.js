@@ -32,23 +32,24 @@ $(window).load(function() {
             $("#scoreContent").text("Excellent work");
           }
 
-          if (placScore >= 4 && taskScore >= 4 && avgSC < 4)
+          else if (placScore >= 4 && taskScore >= 4 && avgSC < 4)
           {
             //good
             $("#scoreContent").text("Good job!");
           }
 
-          if (taskScore < 4 )
+          else if (taskScore < 4 )
           {
             //nice try!
             $("#scoreContent").text("Nice try!");
           }
 
-          if (p < 4)
+          else if (p < 4)
           {
             //nice Try, check placement.
             $("#scoreContent").text("Nice try! Check placement.");
           }
+          
 
 
 
