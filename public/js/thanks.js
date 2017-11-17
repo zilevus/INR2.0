@@ -24,7 +24,7 @@ $(window).load(function() {
           var compScore = Math.round(s4);
           var avg = Math.round((s1 + s2 + s3 + s4 + s5 + s6) / 6);
 
-          var retVal;
+
 
           if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
           {
@@ -55,8 +55,8 @@ $(window).load(function() {
 
           // Returns the success message on how the patient did and sets
           // the background color accordingly.
-          var retVal = scoreToValues(avg);
-          $("#scoreContent").text("Debug score:    " + retVal.response);
+          var retVal = scoreToValues(placScore, taskScore, avgSC);
+          $("#scoreContent").text(retVal.response);
           //$("#scoreContentDiv").css("background-color", retVal.hex);
 
           //$("#prep").text(scoreresponse.toString());
@@ -72,26 +72,29 @@ $(window).load(function() {
 
     	});
       // for the error runs we want to only display feedback for the incorrect run, not total
-      function scoreToValues(score){
+      function scoreToValues(placScore, taskScore, avgSC){
     		console.log("scoreToValues");
     		var hex="";
     		var response="";
-    		if(score==1){
-    			hex="#eddb72";
-    			response="Could improve";
-    		}else if(score==2){
-    			hex="#b3dd5f";
-    			response="That was OK";
-    		}else if(score==3){
-    			response="Nicely Done";
-    			hex="#55e5b5";
-    		}else if(score==4){
-    			response="Great Job";
-    			hex="#27b4f2";
-    		}else if(score==5){
-    			response="Excellent work";
-    			hex="#6b86db";
-    		}else {
+  
+      if (placScore >= 4 && taskScore >= 4 && avgSC >=4){
+          //excelent work
+          response = "Excellent work!"
+          }
+      else if (placScore >= 4 && taskScore >= 4 && avgSC < 4)
+          {
+            response = "Good job!"
+          }
+      else if (taskScore < 4 )
+          {
+            response = "Nice try!"
+          }
+      else if (placScore < 4)
+          {
+            //nice Try, check placement.
+          response = "Nice try! Check placement.";
+          }
+      else {
     			response="No score available";
     			hex="#ffffff";
     		}
