@@ -6,6 +6,9 @@ $(window).load(function() {
     }*/
 	// session storage?
 	// sets the initial exercise
+
+	var taskSetupReq="{\"type\" : \"taskSetup2\",\"task\" : ";
+	socket.emit("json", taskSetupReq +"10"+"}")
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 	// Because the first screen handles the getting of these variables in
@@ -17,8 +20,7 @@ $(window).load(function() {
     // sets the exercise picture equal to necessary number
 
 
-		var taskSetupReq="{\"type\" : \"startRecording\",\"task\" : ";
-	  socket.emit("json", taskSetupReq+"}")
+
 
 	$( '#menuScreen' ).on("tap", function()
 	{
