@@ -9,51 +9,21 @@ html
         script(src='http://code.jquery.com/jquery-1.11.3.min.js')
         script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
         script(src='/js/featuredisable.js')
-        script(src='/js/startRecording.js')
+        script(src='/js/preactivity.js')
         //script(src='/js/papaparse.js');
         script(type='text/javascript')
         div.head
             p#headerContent
         div.notice
-            //p#noticeContent
+            p#noticeContent
         body(margin="auto")
-            div#centeredPatient
-                div#objectSetup
-
-                div.centered
-                    span#centerTitleText <p style="font-family:sans-serif;text-align:middle; font-size:50px; font-weight:bold;">Study Instructions </p>
-                    br
-                    br
-                    img(src="../img/icons-all/sit_back_400.jpg" align = "middle")
-                    br
-                    //span < font style="font-family:sans-serif;">Press anywhere on the red square to return to the previous screen. </font>
-                    //<p style="font-family:sans-serif; font-size:19px; text-align:middle;">Press anywhere on the red square to return to the previous screen.</p>
-                    <p style="font-family:sans-serif;text-align:middle;font-size:25px;">Before performing the activity, you will be asked to check your sitting position. </p>
-
-                    #menuScreen
-                                p.styleFont(#button1Click)#menu1 Menu
-
-
-
-        //div(onclick="moveBack()")#goBack
-            //div.centered
-                //div.forward
-                    //img(src="../img/icons-all/backicon.png")
-
-
-
-        div(onclick="move()")#start
-            div.centered
-                div.forward
-                    img(src="../img/icons-all/forward.png")
-
-
-        script.
-            function move() {
-                //window.location.assign('/preactivity/')
-                window.location.assign('/preactivity/')
-            }
-
-            //function moveBack() {
-                //window.location.assign('/activityObject/')
-            //}
+            div(onclick="move()")#task
+                div#centeredTask
+                    div.centered
+                        //p#tasktext When you feel ready, you will record yourself performing the activity. You press anywhere on the green screen to start recording your activity.
+                        <p style="font-family:sans-serif; font-size:100px; text-align:middle; font-weight:bold;">Press the screen to start the exercise.</p>
+            script.
+                function move() {
+                    notify()
+                    window.location.assign('/activitystarted/')
+                }
