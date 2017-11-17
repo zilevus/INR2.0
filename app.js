@@ -93,6 +93,8 @@ var disable="{\"type\" : \"request\",\"enableEvent\": false}";
 var caseConnect="{\"type\" : \"CaseConnected\"}";
 var objectplaced="{\"type\" : \"ObjectsPlaced\"}";
 var beginTask="{\"type\" : \"BeginTask\"}";
+var startRecording={\"type\" : \"startRecording\"}";
+
 io.on('connection', function (socket) {
   //console.log("CONNECTIONS");
   socket.on('enableJSON',function(){
@@ -109,6 +111,11 @@ io.on('connection', function (socket) {
   socket.on('startTask',function(){
     client.write(startTask);
     console.log(startTask);
+
+  });
+  socket.on('startRecording',function(){
+    client.write(startRecording);
+    console.log(startRecording);
 
   });
   socket.on('resetTask',function(){
