@@ -55,9 +55,10 @@ $(window).load(function() {
 
           // Returns the success message on how the patient did and sets
           // the background color accordingly.
-          var retVal = scoreToValues(avg);
-          $("#scoreContent").text("Debug score:    " + retVal.response);
-          //$("#scoreContentDiv").css("background-color", retVal.hex);
+          /*
+        //  var retVal = scoreToValues(avg);
+          //$("#scoreContent").text("Debug score:    " + retVal.response);
+          //$("#scoreContentDiv").css("background-color", retVal.hex);*/
 
           //$("#prep").text(scoreresponse.toString());
           //$('#noticeContent').text(scoreresponse);
@@ -72,7 +73,33 @@ $(window).load(function() {
 
     	});
       // for the error runs we want to only display feedback for the incorrect run, not total
-      function scoreToValues(score){
+
+    
+        if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
+        {
+          //excelent work
+          $("#scoreContent").text("Excellent work!");
+        }
+
+        else if (placScore >= 4 && taskScore >= 4 && avgSC < 4)
+        {
+          //good
+          $("#scoreContent").text("Good job!");
+        }
+
+        else if (taskScore < 4 )
+        {
+          //nice try!
+          $("#scoreContent").text("Nice try!");
+        }
+
+        else if (p < 4)
+        {
+          //nice Try, check placement.
+          $("#scoreContent").text("Nice try! Check placement.");
+        }
+
+    /*  function scoreToValues(score){
     		console.log("scoreToValues");
     		var hex="";
     		var response="";
@@ -99,7 +126,7 @@ $(window).load(function() {
     			hex: hex,
     			response: response
     		};
-	}
+	}*/
 
     /*  document.getElementById("tg-i4").innerHTML = scoreresponse.score4;
       document.getElementById("tg-i5").innerHTML = scoreresponse.score5;
