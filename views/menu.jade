@@ -1,0 +1,79 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        script(src='/js/menu.js')
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#objectSetup
+                div.centered
+                        span#menuTitle <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:50px; font-weight:bold;">Select an Exercise </p>
+                         #instructClick
+                                          p.styleFont(#instructClick)#b0 Home
+                         #button1Click
+                                           p.styleFont(#button1Click)#b1 Exercise 1
+                         #button2Click
+                                           p.styleFont(#button2Click)#b2 Exercise 2
+                         #button3Click
+                                           p.styleFont(#button3Click)#b3 Exercise 3
+                         #button4Click
+                                           p.styleFont(#button4Click)#b4 Exercise 4
+                         #button5Click
+                                           p.styleFont(#button5Click)#b5 Exercise 5
+                         #button6Click
+                                           p.styleFont(#button6Click)#b6 Exercise 6
+                         #button7Click
+                                           p.styleFont(#button7Click)#b7 Exercise 7
+                         #button8Click
+                                           p.styleFont(#button8Click)#b8 Exercise 8
+                         #button9Click
+                                           p.styleFont(#button9Click)#b9 Exercise 9
+                         #button10Click
+                                           p.styleFont(#button10Click)#b10 Exercise 10
+                         #button11Click
+                                           p.styleFont(#button11Click)#b11 Exercise 11
+                         #button12Click
+                                           p.styleFont(#button12Click)#b12 Exercise 12
+
+                        //p.styleFont(#button1Click)#b1 Exercise 1
+                        //p.styleFont(onclick="button2Click()")#b2 Exercise 2
+                        //p.styleFont(onclick="button3Click()")#b3 Exercise 3
+                        //p.styleFont(onclick="button4Click()")#b4 Exercise 4
+
+
+
+
+
+
+
+
+        div(onclick="move()")#start
+            div.centered
+                div.forward
+
+
+
+
+        //script.
+          //function button2Click() {
+              //var taskSetupReq="{\"type\" : \"taskSetup\",\"task\" : ";
+              //window.location.assign('/exerciseScreen/')
+
+            //}
+        script.
+            function button3Click() {
+               window.location.assign('/exerciseScreen/')
+                }

@@ -1,0 +1,43 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+    
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#objectSetup
+                    div.centered
+                        //span#SetupText Study Instructions
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:50px; font-weight:bold;">Study Instructions </p>
+
+
+                        img#newobjectsUsed(src="../img/icons-all/activity_objects_400.jpg")
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:30px;">You will perform each activity on the tabletop using one or more </p>
+                        span#bottomObject2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:30px;">objects. </p>
+                        br
+                        br
+                        br
+                        br
+                        br
+        div(onclick="move()")#start
+            div.centered
+                div.forward
+                    img(src="../img/icons-all/forward.png")
+
+        script.
+            function move() {
+                window.location.assign('/setupInstructions/')
+            }

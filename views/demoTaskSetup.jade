@@ -1,0 +1,33 @@
+html
+    head
+        title=title
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#firstDiagram
+                    div.centered
+                        span#topScreen <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:45px; font-weight:bold;">Demo Exercise </p>
+                        //span#firstDiagramText Place the objects on the highlighted area of the mat
+                        //span#firstDiagramText <p style="font-family:sans-serif;text-align:middle;font-size:40px;">Place the objects on the highlighted area of the mat. </p>
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:33px;">Place the objects on the highlighted area of the mat. </p>
+                        img#firstSetup(src="../img/startingpos/diagrams-start1.png")
+                        // going to change this with the javascript each time I believe
+            div(onclick="move()")#start
+                div.centered
+                    div.forward
+                        img(src="../img/icons-all/forward.png")
+
+        script.
+            function move() {
+                window.location.href = '/demoVideoExercise/'
+            }

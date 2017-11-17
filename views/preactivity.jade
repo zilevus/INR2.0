@@ -1,0 +1,29 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        script(src='/js/task.js')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        script(src='/js/preactivity.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        div.head
+            p#headerContent
+        div.notice
+            p#noticeContent
+        body(margin="auto")
+            div(onclick="move()")#task
+                div#centeredTask
+                    div.centered
+                        //p#tasktext When you feel ready, you will record yourself performing the activity. You press anywhere on the green screen to start recording your activity.
+                        <p style="font-family:sans-serif; font-size:100px; text-align:middle; font-weight:bold;">Press the screen to start the exercise.</p>
+            script.
+                function move() {
+                    notify()
+                    window.location.assign('/activitystarted/')
+                }

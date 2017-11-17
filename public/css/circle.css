@@ -1,0 +1,41 @@
+#circle1{
+
+     fill:#FFFFFF;
+
+}
+#circle2{
+     fill:#FFFFFF;
+
+}
+#circle3{
+   fill:#FFFFFF;
+
+
+}
+#circle4{
+  fill:#FFFFFF;
+
+}
+path{
+     stroke: white;
+     stroke-width:6px; 
+}
+.image{
+     position:relative;
+     width:100%;
+     float:left;
+}
+.scoreArea{
+    position: absolute;               /* 2 */
+    top: 50%; 
+    left:50%;                        /* 3 */
+    transform: translate(-50%, -50%);
+    position:absolute;
+    margin: 0;
+    color:#59595b;
+
+}
+#scoreImage{
+    width:800px;
+    height:800px;
+}

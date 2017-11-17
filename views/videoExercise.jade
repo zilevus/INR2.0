@@ -1,0 +1,41 @@
+html
+  head
+    title=title
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/circle.css', rel='stylesheet')
+    link(href='/css/survey.css', rel='stylesheet')
+    script(src='/socket.io/socket.io.js')
+    script(src='/js/task.js')
+    //script(src='/js/jquery-3.1.0.min.js')
+    //script(src='/js/jquery.mobile-1.4.5.min.js')
+    script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+    script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+    script(type='text/javascript')
+    script(src='/js/videoExercise.js')
+    div.head
+          p#headerContent
+    body(margin="auto")
+      div#centeredPatient
+        div#diagram
+          div.centered
+            div#popupBoxOnePosition
+              div.popupBoxWrapper
+                div.popupBoxContent
+            p.surveyMessage#exerciseTitle
+            //span#exerciseTitle
+            br
+            br
+            video#videodiag(src="../img/INR-Exercise1.mp4" type="video/mp4" controls="controls")
+            <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:30px;">You can watch a video of each activity </p>
+            #menuScreen
+                 p.styleFont(#button1Click)#menu1 Menu
+            div
+      div(onclick="move()")#start
+            div.centered
+                div.forward
+                    img(src="../img/icons-all/forward.png")
+
+      script.
+            function move() {
+                window.location.href = '/sitBack/'
+            }

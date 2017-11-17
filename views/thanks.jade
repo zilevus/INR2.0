@@ -1,0 +1,36 @@
+//Sit with your back against the chair. Place your right arm in the start position. Press the green button to continue.
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        script(src='/js/task.js')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        script(src='/js/thanks.js')
+        div.head
+            p#headerContent Thank You!
+        div.notice
+            p#noticeContent
+            p#scoreContent
+        div#scoreContentDiv
+        body(margin="auto")
+            div#centeredPatient
+                div#thankingArea
+                    div.centered
+                        span#prep
+
+            div(onclick="move()")#start
+                div.centered
+                    div.forward
+                        img(src="../img/icons-all/forward.png")
+
+            script.
+                function move() {
+                    window.location.assign('/exerciseScreen/')
+                }

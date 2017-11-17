@@ -1,0 +1,12 @@
+{
+  "name": "INR",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "express": "3.0.0alpha4",
+    "jade": "^1.0.4",
+    "mongodb": "^2.2.12",
+    "nib": "^1.0.4",
+    "stylus": "^0.49.1"
+  }
+}

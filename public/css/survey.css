@@ -1,0 +1,58 @@
+.questionDivs{
+  width: 60%;
+  border: solid black 2px;
+  text-align: center;
+  font-weight: 700;
+  background-color: rgba(214, 245, 245, 0.7);
+  border-radius: 3px;
+  margin: auto;
+  margin-bottom: 7%;
+  font-family: sans-serif;
+  font: Tahoma;
+  font-size: 20px;
+
+}
+
+p{
+  color: #59595B;
+	font-family:"Monserat";
+}
+
+html{
+background-color:  #c0c0c0;
+
+}
+
+.surveyMessage{
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  font-family: sans-serif;
+  font: Tahoma
+}
+
+
+#continue{
+  position:fixed;
+  top: 50%;
+  left: 40%;
+  width: 150px;
+  height:150px;
+  background-color: green;
+  border: solid black 6px;
+  border-radius: 15px;
+  visibility: hidden;
+}
+#continueText{
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+}
+#done{
+  position:fixed;
+  top: 50%;
+  width: 200px;
+  height:200px;
+  background-color: blue;
+}

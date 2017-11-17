@@ -1,0 +1,36 @@
+html
+    head
+        title=title
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#objectSetup
+                    div.centered
+                        span#topScreen <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:45px; font-weight:bold;">Demo Exercise </p>
+                        span#SetupText <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:45px;">You will be using the highlighted objects in this exercise. </p>
+                        // we will use javascript to generate the starting image
+                        img#objectsUsed(src="../img/empty/Ex1.png", width='30%', height='25%')
+
+                        //span Remove any other objects that are on the mat and put them away.
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:25px;">Remove any other objects that are on the mat and put them away. </p>
+
+
+        div(onclick="move()")#start
+            div.centered
+                div.forward
+                    img(src="../img/icons-all/forward.png")
+
+        script.
+            function move() {
+                window.location.href = '/demoTaskSetup/'
+            }

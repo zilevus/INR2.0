@@ -1,0 +1,41 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#objectSetup
+                div.centered
+                        span#SetupText <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:50px; font-weight:bold;">Study Instructions </p>
+                        // we will use javascript to generate the starting image
+                        //img#firstSetup(src="")
+
+                        img(src="../img/icons-all/workspace_400.jpg")
+                        br
+                        //span This is your workspace.
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:40px;">This is your activity workspace. </p>
+
+
+        div(onclick="move()")#start
+            div.centered
+                div.forward
+                    img(src="../img/icons-all/forward.png")
+
+
+        script.
+            function move() {
+                window.location.assign('/instructions/')
+            }

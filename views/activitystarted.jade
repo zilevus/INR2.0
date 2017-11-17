@@ -1,0 +1,27 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        script(type='text/javascript')
+        script(src='/js/activitystarted.js')
+        div.head
+            p#headerContent
+        div.notice
+            p#noticeContent
+        body(margin="auto")
+            div(onclick="move()")#task
+                div#centeredStartTask
+                    div.centered
+                        //p#tasktext Activity In Progress Please Touch Screen When You Are Finished
+                        <p style="font-family:sans-serif; font-size:100px; text-align:middle; font-weight:bold;">Task running. Press the screen when done.</p>
+            script.
+                function move() {
+                    grabTime();
+                    window.location.assign('/thanks/')
+                }
