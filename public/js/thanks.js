@@ -26,6 +26,10 @@ $(window).load(function() {
 
           var retVal;
 
+          var avgSC;
+          avgSC = (speedScore+compScore)/2;
+          avgSC = Math.round(avgSC); 
+
           if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
           {
             //excelent work
@@ -74,7 +78,7 @@ $(window).load(function() {
     	});
       // for the error runs we want to only display feedback for the incorrect run, not total
 
-    
+
         if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
         {
           //excelent work
