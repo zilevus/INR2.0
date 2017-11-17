@@ -28,7 +28,7 @@ $(window).load(function() {
 
           var avgSC;
           avgSC = (speedScore+compScore)/2;
-          avgSC = Math.round(avgSC); 
+          avgSC = Math.round(avgSC);
 
           if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
           {
@@ -48,7 +48,7 @@ $(window).load(function() {
             $("#scoreContent").text("Nice try!");
           }
 
-          else if (p < 4)
+          else if (placScore < 4)
           {
             //nice Try, check placement.
             $("#scoreContent").text("Nice try! Check placement.");
