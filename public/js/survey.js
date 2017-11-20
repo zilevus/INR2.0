@@ -34,7 +34,9 @@ $(window).load(function() {
   }
   var intro = "participant " + userNum.toString() + " exercise " + exerciseNumSurvey.toString();
   socket.emit("json", intro);*/
-
+  //var loopNum = sessionStorage.getItem("loopNum");
+  var exerciseNum = sessionStorage.getItem("exerciseNum");
+  exerciseNumSurvey = exerciseNum;
 exerciseNumSurvey = parseInt(exerciseNumSurvey);
 var choices = [];
 switch (exerciseNumSurvey) {

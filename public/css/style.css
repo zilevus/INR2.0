@@ -81,6 +81,7 @@ font-style: normal;
 	vertical-align: top;
 	left: 2%;
 	top: 0%;
+
 }
 #b1 {
 	background-color: #97e157; /* Green */
@@ -424,6 +425,12 @@ font-style: normal;
 	position: fixed;
 	left: 2%;
 	top: 25%;
+}
+
+#endOfStudy {
+	position: fixed;
+	left: 15%;
+	top: 35%;
 }
 #rightCenter2{
 	position: fixed;

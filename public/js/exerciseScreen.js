@@ -39,6 +39,14 @@ $(window).load(function() {
     window.location.assign('/studyend/');
   }
 	$('#exerciseTitle').text("Exercise " + exerciseNum.toString());
+
+  $( '#menuScreen' ).on("tap", function()
+  {
+    console.log("menuScreen.onclick");
+
+    window.location.assign('/menu/')
+
+});
   //exerciseNum++;
   //loopNum = parseInt(loopNum);
   //exerciseNum = parseInt(exerciseNum);

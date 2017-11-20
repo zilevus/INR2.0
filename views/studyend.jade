@@ -5,7 +5,22 @@ html
         link(href='/css/style.css', rel='stylesheet')
         script(src='/js/featuredisable.js')
         script(src='/js/survey.js')
+
+        script(src='/socket.io/socket.io.js')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        script(src='/js/workspace.js')
+
+
+
         body(margin="auto")
             div.homecontainer
                 div.centered
-                    span Thank You for Participating in the INR study.
+                    //span Thank You for Participating in the INR study.
+                    span#endOfStudy <p style="font-family:Tahoma,Geneva,sans-serif;font-weight:bold;text-align:left;font-size:36px;">Thank You for Participating in the INR study! </p>
+                    #menuScreen
+                         p.styleFont(#button1Click)#menu1 Menu
