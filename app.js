@@ -14,8 +14,7 @@ const logger = new Console(process.stdout, process.stderr);
 /*var client = net.connect(8888,'128.237.166.175',function(){
   console.log('Connected');
 });*/
-//var HOST='localhost'; //Change this back to localhost
-var HOST= '192.168.1.185';
+var HOST='localhost'; //Change this back to localhost
 //var HOST='128.173.21.172'; //Change this to whomever is hosting
 var PORT=8888;
 client.connect(PORT,HOST,function(){
