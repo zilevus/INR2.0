@@ -95,7 +95,7 @@ $(window).load(function() {
       else if (placScore < 4)
           {
             //nice Try, check placement.
-          response = "Nice try! Check placement.";
+          response = "Nice try!";
           }
       else {
     			response="No score available";
