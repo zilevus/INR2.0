@@ -51,7 +51,7 @@ $(window).load(function() {
           else if (placScore < 4)
           {
             //nice Try, check placement.
-            $("#scoreContent").text("Nice try! Check placement.");
+            $("#scoreContent").text("Nice try!");
           }
 
 
