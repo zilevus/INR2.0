@@ -119,7 +119,9 @@ $('.questionDivs').on("tap", function() {
 console.log(event.target.id);
 var output = $('#'+event.target.id).text();
 var ques1 = "Exercise " + exerciseNumSurvey + " most closely reminded of " + output.toString();
-//socket.emit("json", ques1);
+socket.emit("json", ques1);
+
+
 console.log(output);
 var second = [];
 for (i in choices) {
