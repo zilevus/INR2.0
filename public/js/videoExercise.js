@@ -22,6 +22,7 @@ $(window).load(function() {
   $('#diagIMG').attr("src", "../img/instructions/diagrams-ex"+exerciseNum.toString()+".png")
 	// sets the exercise picture equal to necessary number
 	$('#videodiag').attr("src", "../img/movies/INR-Exercise"+exerciseNum.toString()+".MOV");
+  //$('#videodiag').attr("src", "../img/newMovies/INR-Exercise"+exerciseNum.toString()+".MOV");
     $( '#video' ).on("tap", function() {
 		console.log("video.onclick");
 		var video = document.getElementById('videodiag');
