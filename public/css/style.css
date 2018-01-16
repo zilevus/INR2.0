@@ -13,6 +13,7 @@ font-style: normal;
 	height: 50px;
 	background-color: #c0c0c0;
 	z-index: 11;
+
 }
 .styleFont{
   text-align: center;
@@ -26,6 +27,10 @@ font-style: normal;
 		font: Tahoma;
 		text-align:middle;
 		font-size:15px;
+}
+.exerciseFontStyle{
+		text-align:middle;
+		font-size:100px;
 }
 #menu1 {
 	background-color: #97e157; /* Green */
@@ -423,8 +428,8 @@ font-style: normal;
 
 #rightCenter{
 	position: fixed;
-	left: 2%;
-	top: 25%;
+	left: 1%;
+	top: 15%;
 }
 
 #endOfStudy {
@@ -434,8 +439,13 @@ font-style: normal;
 }
 #rightCenter2{
 	position: fixed;
-	left: 2%;
-	top: 31%;
+	left: 1%;
+	top: 35%;
+}
+#rightCenter3{
+	position: fixed;
+	left: 1%;
+	top: 45%;
 }
 
 #centerTitleText{
