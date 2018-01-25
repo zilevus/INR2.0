@@ -36,11 +36,20 @@ $(window).load(function() {
 
 	})
 
+
   $( '#menuScreen' ).on("tap", function()
   {
       console.log("menuScreen.onclick");
 
       window.location.assign('/menu/')
+
+});
+
+$( '#backScreen' ).on("tap", function()
+{
+  console.log("backScreen.onclick");
+
+  window.location.assign('/tasksetup/')
 
 });
 

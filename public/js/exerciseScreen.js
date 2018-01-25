@@ -22,17 +22,47 @@ $(window).load(function() {
   loopNum = parseInt(loopNum);
   exerciseNum = parseInt(exerciseNum);
   loopNum = loopNum+1;
-  if (exerciseNum.toString() == "NaN")
+
+  if (exerciseNum.toString() == "NaN") /// good dont change
   {
     exerciseNum = 1;
     loopNum = 1;
   }
-  if (loopNum > 4)
+
+  sessionStorage.setItem("exerciseNum", exerciseNum.toString());
+  sessionStorage.setItem("loopNum", loopNum.toString());
+
+  if (loopNum > 4) //good dont change
   {
     //exerciseNum = 1;
     loopNum = 1;
     exerciseNum++;
+
   }
+  if (loopNum > 2)
+  {
+      setTimeout(function(){
+      window.location.assign('/videoExercise/');}, 3000);
+  }
+  else if (loopNum <= 2 )
+  {
+    setTimeout(function(){
+      window.location.assign('/taskinit/');}, 3000);
+  }
+  else {
+  setTimeout(function(){
+    window.location.assign('/taskinit/');}, 3000);
+}
+
+  if (loopNum > 4) //good dont change
+  {
+    //exerciseNum = 1;
+    loopNum = 1;
+    exerciseNum++;
+
+  }
+
+
 
   if (loopNum == 1 && exerciseNum == 13)
   {
@@ -47,6 +77,14 @@ $(window).load(function() {
     window.location.assign('/menu/')
 
 });
+
+$( '#backScreen' ).on("tap", function()
+{
+  console.log("backScreen.onclick");
+
+  window.location.assign('/conclusion/')
+
+});
   //exerciseNum++;
   //loopNum = parseInt(loopNum);
   //exerciseNum = parseInt(exerciseNum);
@@ -57,7 +95,12 @@ $(window).load(function() {
     loopNum = 1;
     exerciseNum++;
   }*/
+
+
   $('#taskTitle').text("Repetition " + loopNum.toString());
+
+
+
     //#diagIMG(src="../img/icons-all/diagrams-ex1.png")
   $('#diagIMG').attr("src", "../img/instructions/diagrams-ex"+exerciseNum.toString()+".png")
 	// sets the exercise picture equal to necessary number

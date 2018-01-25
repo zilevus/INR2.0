@@ -8,6 +8,20 @@ function notify() {
     socket.emit("json", startRecording);
 }
 
+if (loopNum == null) {
+  loopNum = 0;
+} //loopNum++;
+
+if (exerciseNum == null) {
+  exerciseNum = 1;
+} if (loopNum == 5) {
+  exerciseNum++;
+  loopNum = 1;
+}
+
+sessionStorage.setItem("exerciseNum", exerciseNum.toString());
+sessionStorage.setItem("loopNum", loopNum.toString());
+
 $(window).load(function() {
 
 
@@ -18,4 +32,14 @@ $(window).load(function() {
     window.location.assign('/menu/')
 
   })
+
+
+  $( '#backScreen' ).on("tap", function()
+  {
+    console.log("backScreen.onclick");
+
+    window.location.assign('/videoExercise/')
+
+  })
+
 });

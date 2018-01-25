@@ -21,20 +21,25 @@ html
             div#popupBoxOnePosition
               div.popupBoxWrapper
                 div.popupBoxContent
-            p.surveyMessage#exerciseTitle Exercise 1 
-            p.surveyMessage#taskTitle Repetition 1
+
+            p.exerciseFontSize#exerciseTitle Exercise 1
+            p.exerciseFontSize#taskTitle Repetition 1
+            //p.surveyMessage#taskTitle Repetition 1
             //#taskTitle Task 1
             br
             br
             #menuScreen
                  p.styleFont(#button1Click)#menu1 Menu
+
+            #backScreen
+                 p.styleFont(#button2Click)#buttonBack Back
             div
       div(onclick="move()")#start
             div.centered
                 div.forward
-                    img(src="../img/icons-all/forward.png")
+                    //img(src="../img/icons-all/forward.png")
 
-      script.
-            function move() {
-                window.location.href = '/taskinit/'
-            }
+      //script.
+            //function move() {
+                //window.location.href = '/taskinit/'
+            //}

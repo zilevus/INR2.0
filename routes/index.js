@@ -82,3 +82,9 @@ exports.demoThanks=function(req,res){
 exports.menu=function(req,res){
 	res.render('menu', {title: "Menu"});
 }
+exports.patientOption=function(req,res){
+	res.render('patientOption', {title: "Patient Option"});
+}
+exports.patientOption2=function(req,res){
+	res.render('patientOption2', {title: "Patient Option 2"});
+}

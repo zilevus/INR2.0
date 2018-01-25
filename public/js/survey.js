@@ -119,6 +119,20 @@ $('.questionDivs').on("tap", function() {
 console.log(event.target.id);
 var output = $('#'+event.target.id).text();
 var ques1 = "Exercise " + exerciseNumSurvey + " most closely reminded of " + output.toString();
+
+//writing to textfile
+
+
+
+
+/*var txtFile = "/Users/ZilevuK/Desktop/Survey.txt";
+var file = new File(txtFile);
+file.open("w");
+file.writeln(ques1);
+file.close();*/
+
+
+//writing to textfile
 //socket.emit("json", ques1);
 
 
@@ -218,14 +232,16 @@ $(document).on("tap", function() {
 
   if (clickOne == 2) {
     //$('#topMessage').text("You are now ready to move to the next activity. Please allow a couple seconds");
+
     $('#topMessage').text("Thank you. We are recording your survey selection.");
+
 
 
     $('#topMessage').css('color', '#59595B');
     $('#whole').css('background-color', 'light gray');
     exerciseNumSurvey++;
     sessionStorage.setItem("exerciseNumSurvey", exerciseNumSurvey.toString());
-    if (exerciseNumSurvey == 12) {
+    if (exerciseNumSurvey > 12) {
       userNum++;
       sessionStorage.setItem("userNum", userNum);
       sessionStorage.setItem("exerciseNumSurvey", "1");
@@ -243,6 +259,7 @@ $(document).on("tap", function() {
 
 
 })
+
 
 /*$('#continue').on("tap", function() {
   $('#continue').css('visibility', 'hidden');

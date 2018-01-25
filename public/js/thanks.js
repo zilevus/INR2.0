@@ -145,7 +145,7 @@ $(window).load(function() {
 	// Take the user to a survey, then renavigate
 	// back to the initial page
 	$('#start').on('click', function() {
-		if (parseInt(loopNum) == 4) {
+		if (parseInt(loopNum) >= 4) {
 			window.location.assign('/survey/');
 		} else {
 			window.location.assign('/exerciseScreen'); //it was taskinit orginally

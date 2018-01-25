@@ -24,4 +24,12 @@ $(window).load(function() {
 
 });
 
+$( '#backScreen' ).on("tap", function()
+{
+  console.log("backScreen.onclick");
+
+  window.location.assign('/taskinit/')
+
+});
+
 });

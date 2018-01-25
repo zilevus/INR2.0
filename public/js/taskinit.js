@@ -8,14 +8,16 @@ $(window).load(function() {
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 	if (loopNum == null) {
 		loopNum = 0;
-	} loopNum++;
+	} //loopNum++;
 
 	if (exerciseNum == null) {
 		exerciseNum = 1;
 	} if (loopNum == 5) {
 		exerciseNum++;
 		loopNum = 1;
-	} // executes each cycle 4 times, two for the good runs, two for induced error.
+	}
+
+	// executes each cycle 4 times, two for the good runs, two for induced error.
     var dat = new Date();
     var fulltime = dat.toJSON();
     //var retMsg = "{\"page\" : \"taskinit\", \"access time\" : "+"\""+fulltime+"\""+ ", \"iteration\" : "+"\""+loopNum.toString()+"\""+"\"exercise\" : "+"\""+exerciseNum.toString()+"\""+"}";

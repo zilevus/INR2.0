@@ -1,0 +1,53 @@
+html
+    head
+        title=title
+        meta(name='viewport', content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;')
+        link(href='/css/style.css', rel='stylesheet')
+        link(href='/css/circle.css', rel='stylesheet')
+        script(src='/socket.io/socket.io.js')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        script(src='http://code.jquery.com/jquery-1.11.3.min.js')
+        script(src='http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js')
+        script(src='/js/featuredisable.js')
+        //script(src='/js/papaparse.js');
+        script(type='text/javascript')
+        script(src='/js/conclusion.js')
+        div.head
+            p#headerContent
+        div.notice
+            //p#noticeContent
+        body(margin="auto")
+            div#centeredPatient
+                div#objectSetup
+                div.centered
+                        //span#centerConclusionText <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:50px; font-weight:bold;">Introductions Complete </p>
+                        br
+                        // we will use javascript to generate the starting image
+                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:40px;">Please select one of the following options which best describes your stroke condition: </p>
+                        //span(onclick="button1Click()")#button1 Mild Condition
+                        span(onclick="button1Click()")#button1 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:20px; font-weight:bold;"> Mild </p>
+                        br
+                        br
+                        span(onclick="button2Click()")#button1 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:20px; font-weight:bold;">Moderate</p>
+                        //span(onclick="button2Click()")#button2 Rehearse Exercise
+                        br
+                        br
+
+
+
+
+
+        div(onclick="move()")#start
+            div.centered
+                div.forward
+
+
+
+        script.
+            function button1Click() {
+                window.location.assign('/patientOption2')
+            }
+        script.
+            function button2Click() {
+                window.location.assign('/patientOption2/')
+            }

@@ -19,11 +19,15 @@ html
                     div.centered
                         //span#firstDiagramText Place the objects on the highlighted area of the mat
                         //span#firstDiagramText <p style="font-family:sans-serif;text-align:middle;font-size:40px;">Place the objects on the highlighted area of the mat. </p>
-                        <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:33px;">Place the objects on the highlighted area of the mat. </p>
+                        span#centerTaskSetup <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:50px;">Place the objects on the highlighted </p>
+                        span#centerTaskSetup2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle;font-size:50px;">area of the mat. </p>
+                        //img#firstSetup(src="../img/startingpos/diagrams-start1.png")
                         img#firstSetup(src="../img/startingpos/diagrams-start1.png")
                         // going to change this with the javascript each time I believe
-        #menuScreen
-                    p.styleFont(#button1Click)#menu1 Menu
+                        #menuScreen
+                              p.styleFont(#button1Click)#menu1 Menu
+                        #backScreen
+                              p.styleFont(#button2Click)#buttonBack Back     
             div(onclick="move()")#start
                 div.centered
                     div.forward

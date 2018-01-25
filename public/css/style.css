@@ -47,11 +47,13 @@ font-style: normal;
 	//border-radius: 50%;
 	position: fixed;
 	vertical-align: top;
-	left: 5%;
+	left: 2%;
 	top: 0%;
 }
-#button {
-	background-color: #97e157; /* Green */
+
+#buttonBack {
+
+	background-color: #ff6c3b;
 	border: none;
 	color: white;
 	padding: 15px 32px;
@@ -62,11 +64,11 @@ font-style: normal;
 	cursor: pointer;
 	//width: 250px;
 	border: 2px solid #555555;
-	border-radius: 50%;
+	//border-radius: 50%;
 	position: fixed;
 	vertical-align: top;
-	left: 60%;
-	top: 20%;
+	left: 2%;
+	top: 85%;
 }
 
 #b0 {
@@ -306,6 +308,8 @@ font-style: normal;
 	left: 60%;
 	top: 80%;
 }
+
+
 #button1 {
 	background-color: #97e157; /* Green */
 	border: none;
@@ -360,6 +364,7 @@ font-style: normal;
 	top: 35%;
 	text-align: center;
 	z-index: 900;
+
 }
 
 /* Centers the text at the top and center */
@@ -455,6 +460,26 @@ font-style: normal;
 	top: 0%;
 }
 
+#centerTaskSetup{
+	position: fixed;
+	vertical-align: top;
+	left: 2%;
+	top: 3%;
+}
+#centerTaskSetup2{
+	position: fixed;
+	vertical-align: top;
+	left: 2%;
+	top: 10%;
+}
+
+#centerSitBack{
+	position: fixed;
+	vertical-align: top;
+	left: 2%;
+	top: 70%;
+}
+
 #centerConclusionText{
 	position: fixed;
 	vertical-align: top;
@@ -479,13 +504,15 @@ font-style: normal;
 	/*position: fixed;*/
 	margin-top: 7%;
 	left: 12%;
-	width: 85%;
-	font-size: 40px;
+	width: 100%;
+	font-size: 50px;
 	font-weight: 700;
 	text-align: center;
 	color: #59595B;
-	font-family:"Monserat";
+	//font-family:"Monserat";
 	z-index: 999;
+	font-family:sans-serif;
+	//text-align:left;
 }
 
 
@@ -521,6 +548,18 @@ span{
 	top: -2%;
 	color: #59595B;
 	font-family:"Monserat";
+}
+
+#headerContent2{
+	position: fixed;
+	left: 25%;
+	font-size: 80px;
+	font-weight: 700;
+	top: 0%;
+	color: #59595B;
+	font-family:Tahoma,Geneva,sans-serif;
+	text-align:left;
+
 }
 /*this handles the background color*/
 html{
@@ -883,7 +922,9 @@ margin:auto;
 max-width: 70%;
 display:block;
 margin:auto;
-margin-top:100px;
+margin-top:15px;
+
+
 }
 
 #objects_wrapper,
