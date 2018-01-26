@@ -6,6 +6,7 @@
     }*/
 	// session storage?
 	// sets the initial exercise
+/*
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 
@@ -41,10 +42,6 @@ $(window).load(function() {
           var s1 = scoreresponse.score1; //hand placement
           var s2 = scoreresponse.score2; //repeat
 
-          var handPlacement = Math.round(s1);
-          var repeatMovement= Math.round(s2);
-					socket.emit(handPlacement);
-					socket.emit(repeatMovement);
 
 
 
