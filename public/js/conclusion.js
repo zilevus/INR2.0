@@ -37,11 +37,11 @@ $(window).load(function() {
 					$("#scoreContent").text("repeat!");
 				}
 
-			var retVal = scoreToValues(placScore, taskScore, avgSC);
+			var retVal = scoreToValues(right, repeat);
 			$("#scoreContent").text(retVal.response);
 			console.log(scoreresponse);
 
-			function scoreToValues(placScore, taskScore, avgSC){
+			function scoreToValues(right, repeat){
 				console.log("scoreToValues");
 				var hex="";
 				var response="";
