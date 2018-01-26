@@ -10,6 +10,12 @@
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 
+	var patientHand = 1;
+	var repeatPatient = 0;
+
+
+
+
 
 	// Because the first screen handles the getting of these variables in
 	// session storage we can reuse them anywhere throughout the application

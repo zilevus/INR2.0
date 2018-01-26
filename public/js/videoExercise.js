@@ -21,7 +21,18 @@ $(window).load(function() {
     //#diagIMG(src="../img/icons-all/diagrams-ex1.png")
   $('#diagIMG').attr("src", "../img/instructions/diagrams-ex"+exerciseNum.toString()+".png")
 	// sets the exercise picture equal to necessary number
-	$('#videodiag').attr("src", "../img/movies/INR-Exercise"+exerciseNum.toString()+".mp4");
+
+  var patientHand = sessionStorage.getItem("patientHand");
+  if (patientHand == 1)
+  {
+    $('#videodiag').attr("src", "../img/movies/leftHand/INR-Exercise"+exerciseNum.toString()+".mp4");
+  }
+
+  else
+  {
+  $('#videodiag').attr("src", "../img/movies/INR-Exercise"+exerciseNum.toString()+".mp4");
+  }
+	//$('#videodiag').attr("src", "../img/movies/leftHand/INR-Exercise"+exerciseNum.toString()+".mp4");
   //$('#videodiag').attr("src", "../img/newMovies/INR-Exercise"+exerciseNum.toString()+".MOV");
     $( '#video' ).on("tap", function() {
 		console.log("video.onclick");

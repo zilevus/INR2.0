@@ -17,6 +17,8 @@ $(window).load(function() {
           var s4 = scoreresponse.score4; //compensation
           var s5 = scoreresponse.score5; //drop
           var s6 = scoreresponse.score6; //path
+          var patientHand = scoreresponse.score7; // hand
+          var repeat = scoreresponse.score8; //repeat
 
           var speedScore = Math.round(s1);
           var placScore = Math.round(s2);
