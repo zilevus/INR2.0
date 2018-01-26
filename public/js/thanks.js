@@ -31,7 +31,7 @@ $(window).load(function() {
            avgSC = Math.round(avgSC);
            var avg = Math.round((s1 + s2 + s3 + s4 + s5 + s6) / 6);
 
-
+           $("#scoreContent").text(patientHand.toString());
 
           if (placScore >= 4 && taskScore >= 4 && avgSC >=4)
           {
