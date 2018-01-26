@@ -26,7 +26,7 @@ $(window).load(function() {
            var avgSC;
            avgSC = (speedScore+compScore)/2;
            avgSC = Math.round(avgSC);
-          var avg = Math.round((s1 + s2 + s3 + s4 + s5 + s6) / 6);
+           var avg = Math.round((s1 + s2 + s3 + s4 + s5 + s6) / 6);
 
 
 
