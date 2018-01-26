@@ -19,6 +19,7 @@ $(window).load(function() {
           var s6 = scoreresponse.score6; //path
           var patientHand = scoreresponse.score7; // hand
           var repeat = scoreresponse.score8; //repeat
+          sessionStorage.setItem("patientHand", patientHand.toString());
 
           var speedScore = Math.round(s1);
           var placScore = Math.round(s2);
