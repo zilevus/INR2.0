@@ -17,7 +17,7 @@ $(window).load(function() {
     //    io().emit("json", retMsg);
     // sets the exercise picture equal to necessary number
 
-		var patientHand =session.storage.getItem("patientHand");
+		/*var patientHand =session.storage.getItem("patientHand");
 		//sessionStorage.setItem("patientHand", patientHand.toString());
 
 		if (patientHand == 1)
@@ -27,7 +27,7 @@ $(window).load(function() {
 		else
 		{
 			$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
-		}
+		}*/
 
 
 	$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
