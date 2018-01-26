@@ -15,7 +15,7 @@ $(window).load(function() {
     //var retMsg = "{\"page\" : \"tasksetup\", \"access time\" : "+"\""+fulltime+"\""+ ", \"iteration\" : "+"\""+loopNum.toString()+"\""+"\"exercise\" : "+"\""+exerciseNum.toString()+"\""+"}";
     //    io().emit("json", retMsg);
     // sets the exercise picture equal to necessary number
-	$('#firstSetup').attr("src", "../img/startingpos/diagrams-start"+exerciseNum.toString()+".png");
+	$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
 	$( '#menuScreen' ).on("tap", function()
 	{
 		console.log("menuScreen.onclick");
