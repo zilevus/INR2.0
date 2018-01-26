@@ -10,7 +10,25 @@ $(window).load(function() {
   //var taskSetupReq="{\"type\" : \"taskSetup\",\"task\" : ";
   //socket.emit("json", taskSetupReq +exerciseNum.toString()+"}")
 
+/* test 1212*/
+console.log("HERE first");
+var taskLoad=false;
+var taskname=document.getElementById("taskName");
+var endTask="{\"type\" : \"endTask\"}";
+socket.emit("json", endTask);
+socket.on('message',function(data){
+  console.log("HERE");
+  var html="";
+  if(data.message!=null){
+    var LeftorRight=JSON.parse(data.message);
+    var L1 = LeftorRight.L1; //speed
+    var hand = L1.tostring;
+    console.log(LeftorRight);
+    var response = "";
+    $("#scoreContent").text(hand.response);
 
+
+/*test 1212*/
     var dat = new Date();
     var fulltime = dat.toJSON();
     //var retMsg = "{\"page\" : \"videosetup\", \"access time\" : "+"\""+fulltime+"\""+ ", \"iteration\" : "+"\""+loopNum.toString()+"\""+"\"exercise\" : "+"\""+exerciseNum.toString()+"\""+"}";

@@ -6,7 +6,11 @@ var exerciseNum = sessionStorage.getItem("exerciseNum");
 function notify() {
     var startRecording="{\"type\" : \"startRecording\", \"task\" : "+exerciseNum.toString()+"}";
     socket.emit("json", startRecording);
+
 }
+
+
+
 
 if (loopNum == null) {
   loopNum = 0;
