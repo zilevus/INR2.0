@@ -33,7 +33,7 @@ $(window).load(function() {
   $('#videodiag').attr("src", "../img/movies/INR-Exercise"+exerciseNum.toString()+".mp4");
 }*/
 	//$('#videodiag').attr("src", "../img/movies/leftHand/INR-Exercise"+exerciseNum.toString()+".mp4");
-  $('#videodiag').attr("src", "../img/newMovies/INR-Exercise"+exerciseNum.toString()+".mp4");
+  $('#videodiag').attr("src", "../img/movies/INR-Exercise"+exerciseNum.toString()+".mp4");
     $( '#video' ).on("tap", function() {
 		console.log("video.onclick");
 		var video = document.getElementById('videodiag');
