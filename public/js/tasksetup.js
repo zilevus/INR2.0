@@ -18,7 +18,7 @@ $(window).load(function() {
     // sets the exercise picture equal to necessary number
 
 		//var patientHand = 1;
-		sessionStorage.setItem("patientHand", patientHand.toString());
+		/*sessionStorage.setItem("patientHand", patientHand.toString());
 
 		if (patientHand == 1)
 		{
@@ -27,10 +27,10 @@ $(window).load(function() {
 		else
 		{
 			$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
-		}
+		}*/
 
 
-	//$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
+	$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
 	$( '#menuScreen' ).on("tap", function()
 	{
 		console.log("menuScreen.onclick");
