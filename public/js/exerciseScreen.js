@@ -11,7 +11,7 @@ $(window).load(function() {
   //socket.emit("json", taskSetupReq +exerciseNum.toString()+"}")
 
 /* test 1212*/
-console.log("HERE first");
+/*console.log("HERE first");
 var taskLoad=false;
 var taskname=document.getElementById("taskName");
 var endTask="{\"type\" : \"endTask\"}";
@@ -25,7 +25,7 @@ socket.on('message',function(data){
     var hand = L1.tostring;
     console.log(LeftorRight);
     var response = "";
-    $("#scoreContent").text(hand.response);
+    $("#scoreContent").text(hand.response);*/
 
 
 /*test 1212*/
