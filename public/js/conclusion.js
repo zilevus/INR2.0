@@ -43,6 +43,8 @@ $(window).load(function() {
 
           var handPlacement = Math.round(s1);
           var repeatMovement= Math.round(s2);
+					socket.emit(handPlacement);
+					socket.emit(repeatMovement);
 
 
 
@@ -95,6 +97,8 @@ $(window).load(function() {
     		console.log("scoreToValues");
     		var hex="";
     		var response="";
+			socket.emit(handPlacement);
+			socket.emit(repeatMovement);
       if (handPlacement == 0){
           //excelent work
           response = "Right!"
@@ -108,7 +112,7 @@ $(window).load(function() {
             response = "Repeat"
           }
       else if (repeatMovement == 0 )
-          { 
+          {
             //nice Try, check placement.
           response = "not repeat";
           }
