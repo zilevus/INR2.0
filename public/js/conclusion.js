@@ -6,7 +6,7 @@
     }*/
 	// session storage?
 	// sets the initial exercise
-/*
+
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
 
@@ -20,10 +20,10 @@
     // sets the exercise picture equal to necessary number
 	$('#firstSetup').attr("src", "../img/startingpos/diagrams-start"+".png");
 
-});*/
+});
 
 
-
+/*
 $(window).load(function() {
     var socket = io();
     	console.log("HERE first");
@@ -134,7 +134,7 @@ $(window).load(function() {
           k.innerHTML = scoreresponse.scoreSets;
       }*/
       // speed, placement, task, compensation, drop, path
-
+/*
 
 	var loopNum = sessionStorage.getItem("loopNum");
 	var exerciseNum = sessionStorage.getItem("exerciseNum");
@@ -170,3 +170,5 @@ $(window).load(function() {
 
 
 });
+
+*/
