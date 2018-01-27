@@ -69,7 +69,7 @@ $(window).load(function() {
           //$('#noticeContent').text(scoreresponse);
 
 
-          //console.log(scoreresponse);
+          console.log(scoreresponse);
 
 
 
