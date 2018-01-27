@@ -23,14 +23,15 @@ html
                         span#topCenterTitle <p style="font-family:Tahoma,Geneva,sans-serif;text-align:middle; font-size:70px; font-weight:bold;">Welcome! </p>
                          //<p style="font-family:Montserrat,sans-serif;text-align:middle; font-size:70px; font-weight:bold;">Welcome! </p>
                         br
-                        br
-                        br
-                        span#rightCenter <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:60px;">In the following screens,we will introduce you to our system </p>
-                        span#rightCenter2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:60px;"> and the study outline. </p>
-                        br
+                        //br
+                        //br
+                        video#videodiag(src="../img/movies/StudyInstructions/Study-Instructions.mp4" type="video/mp4" controls="controls")
+                        //span#rightCenter <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:60px;">In the following screens,we will introduce you to our system </p>
+                        //span#rightCenter2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:60px;"> and the study outline. </p>
+                        //br
 
-                        span#bottomCenter <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:40px;">Please press anywhere on the green area to </p>
-                        span#bottomCenter2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:40px;"> move forward. </p>
+                        span#homePageCenter <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:40px;"> After watching the video, please press anywhere </p>
+                        span#homePageCenter2 <p style="font-family:Tahoma,Geneva,sans-serif;text-align:left;font-size:40px;"> on the green area to move forward. </p>
                         #menuScreen
                              p.styleFont(#button1Click)#menu1 Menu
 
@@ -42,5 +43,6 @@ html
 
         script.
             function move() {
-                window.location.assign('/workspace/')
+                //window.location.assign('/workspace/')
+                  window.location.assign('/conclusion/')
             }

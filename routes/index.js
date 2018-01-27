@@ -85,6 +85,6 @@ exports.menu=function(req,res){
 exports.patientOption=function(req,res){
 	res.render('patientOption', {title: "Patient Option"});
 }
-exports.patientOption2=function(req,res){
-	res.render('patientOption2', {title: "Patient Option 2"});
+exports.instructionVideo=function(req,res){
+	res.render('instructionVideo', {title: "Instruction Video"});
 }

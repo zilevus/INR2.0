@@ -88,7 +88,7 @@ app.get('/demoActivityStarted/', routes.demoActivityStarted);
 app.get('/demoThanks/', routes.demoThanks);
 app.get('/menu/', routes.menu);
 app.get('/patientOption/', routes.patientOption);
-app.get('/patientOption2/', routes.patientOption2);
+app.get('/instructionVideo/', routes.instructionVideo);
 
 var startTask="{\"type\" : \"startTask\"}";
 var resetTask="{\"type\" : \"resetTask\"}";

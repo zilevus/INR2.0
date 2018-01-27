@@ -413,6 +413,20 @@ font-style: normal;
 	top: 80%;
 }
 
+#homePageCenter{
+	position: fixed;
+	left: 2%;
+	top: 70%;
+}
+
+#homePageCenter2{
+	position: fixed;
+	left: 2%;
+	top: 77%;
+}
+
+
+
 #bottomCenter2{
 	position: fixed;
 	left: 2%;
