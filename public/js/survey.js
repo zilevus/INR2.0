@@ -133,7 +133,7 @@ file.close();*/
 
 
 //writing to textfile
-//socket.emit("json", ques1);
+socket.emit("json", ques1);
 
 
 console.log(output);
