@@ -25,7 +25,6 @@ $(window).load(function() {
           var placScore = Math.round(s2);
           var taskScore = Math.round(s3);
           var compScore = Math.round(s4);
-
            var avgSC;
            avgSC = (speedScore+compScore)/2;
            avgSC = Math.round(avgSC);
@@ -70,7 +69,10 @@ $(window).load(function() {
           //$('#noticeContent').text(scoreresponse);
 
 
-          console.log(scoreresponse);
+          //console.log(scoreresponse);
+
+
+
     			//console.log(obj);
     			//alert(scoreresponse);
     		}else{
