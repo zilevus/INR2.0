@@ -31,6 +31,11 @@ $(window).load(function() {
 
 
 	$('#firstSetup').attr("src", "../img/startingpos/diagram-start"+exerciseNum.toString()+".png");
+
+	/** this for left handed patients **/
+	//$('#firstSetup').attr("src", "../img/startingpos/left-diagram-start"+exerciseNum.toString()+".png");
+	/** this is for left handed patients **/
+
 	$( '#menuScreen' ).on("tap", function()
 	{
 		console.log("menuScreen.onclick");

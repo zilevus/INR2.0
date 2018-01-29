@@ -134,6 +134,8 @@ file.close();*/
 
 //writing to textfile
 //socket.emit("json", ques1);
+//console.log(ques1);
+
 
 
 console.log(output);
