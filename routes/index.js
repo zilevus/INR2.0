@@ -21,21 +21,45 @@ exports.preactivity=function(req, res) {
 }
 exports.activitystarted=function(req, res) {
 	res.render('activitystarted', {title:"Activity In Progress"});
+
+	const { spawn } = require('child_process');
+	const pyProg = spawn('python', ['./Python_Scripts/Timestamp_ActivityStarted.py']);
+	pyProg.stdout.on('data', function (data) {
+		console.log(data.toString());
+		res.write(data);
+		res.end('end');
+	});
 }
 exports.thanks=function(req, res) {
 	res.render('thanks', {title:"Thank You"});
+
+	const { spawn } = require('child_process');
+	const pyProg = spawn('python', ['./Python_Scripts/Timestamp_ActivityStopped.py']);
+	pyProg.stdout.on('data', function (data) {
+		console.log(data.toString());
+		res.write(data);
+		res.end('end');
+	});
 }
 exports.studyend=function(req, res) {
     res.render('studyend', {title:"Study Concluded"});
 }
 exports.workspace=function(req, res) {
-		res.render('workspace', {title:"Workspace"});
+	res.render('workspace', {title:"Workspace"});
 }
 exports.instructions=function(req, res){
-		res.render('instructions', {title:"Instructions"});
+	res.render('instructions', {title:"Instructions"});
 }
 exports.conclusion=function(req, res){
-	 res.render('conclusion', {title:"Conclusion"});
+	res.render('conclusion', {title:"Conclusion"});
+
+	const { spawn } = require('child_process');
+	const pyProg = spawn('python', ['./Python_Scripts/StartRecordingCams.py']);
+	pyProg.stdout.on('data', function (data) {
+		console.log(data.toString());
+		res.write(data);
+		res.end('end');
+	});
 }
 exports.activityObject=function(req,res){
 	res.render('activityObject', {title:"Activity Object"});
