@@ -40,8 +40,8 @@ def StreamCams(cam1, cam2):
     f1 = open('out_timestamp1.csv', "w") # opening it once to erase the file 
     f2 = open('out_timestamp2.csv' ,"w") # opening it once to erase the file
     
-    f3 = open('ActivityTimeStamps.csv',"w") #Creating a csv file where Activity Started and Activity Stopped time data will be written
-    f3.write("Cameras Started:," + str(datetime.datetime.now()) + '\n')
+    with open('ActivityTimeStamps.csv',"w") as f3:#Creating a csv file where Activity Started and Activity Stopped time data will be written
+        f3.write("Cameras Started:," + str(datetime.datetime.now()) + '\n')
     
     while(1):
         ret1, frame1 = cap1.read()
