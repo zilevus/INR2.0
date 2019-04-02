@@ -9,7 +9,7 @@ def getFrameTimeStamp(cam):
     payload = {'Username' : cam['id'], 'Password' : cam['pass']}
     res = requests.post(http_link, data=payload)
     
-    return res.text#[:10]
+    return res.text
 
 
 def StreamCams(cam1, cam2):
@@ -29,10 +29,10 @@ def StreamCams(cam1, cam2):
     
     # Default resolutions of the frame are obtained.The default resolutions are system dependent.
     # We convert the resolutions from float to integer.
-    cam1_frame_width = int(cap1.get(3))
-    cam1_frame_height = int(cap1.get(4))
-    cam2_frame_width = int(cap2.get(3))
-    cam2_frame_height = int(cap2.get(4))
+    cam1_frame_width = int(cap1.get(3)) # 1920 pixels
+    cam1_frame_height = int(cap1.get(4))  # 1080 pixels
+    cam2_frame_width = int(cap2.get(3))  # 1920 pixels
+    cam2_frame_height = int(cap2.get(4))  # 1080 pixels
 
     # Define the codec and create VideoWriter object.The output is stored in the same folder as this script
     out1 = cv2.VideoWriter('outputCam1.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 30, (cam1_frame_width,cam1_frame_height))
@@ -41,7 +41,7 @@ def StreamCams(cam1, cam2):
     f2 = open('out_timestamp2.csv' ,"w") # opening it once to erase the file
     
     with open('ActivityTimeStamps.csv',"w") as f3:#Creating a csv file where Activity Started and Activity Stopped time data will be written
-        f3.write("Cameras Started:," + str(datetime.datetime.now()) + '\n')
+        f3.write("Cameras Started:," + str(datetime.datetime.now())[:-4] + '\n')
     
     while(1):
         ret1, frame1 = cap1.read()
@@ -54,13 +54,10 @@ def StreamCams(cam1, cam2):
             #cv2.imshow('VIDEO FROM CAM1', frame1)
             #cv2.imshow('VIDEO FROM CAM2', frame2)
             with open('out_timestamp1.csv', "a") as f1:
-                f1.write(str(datetime.datetime.now()) + '\n')
+                f1.write(str(datetime.datetime.now())[:-4] + '\n')
             with open('out_timestamp2.csv', "a") as f2:
-                f2.write(str(datetime.datetime.now()) + '\n')
-
-        #print('Cam1 Frame Timestamp:' + getFrameTimeStamp(cam1))
-        #print('Cam2 Frame Timestamp:' + getFrameTimeStamp(cam2))
-
+                f2.write(str(datetime.datetime.now())[:-4] + '\n')
+                
         # Press Q on keyboard to stop recording
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
