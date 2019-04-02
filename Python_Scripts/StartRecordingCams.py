@@ -13,8 +13,8 @@ def getFrameTimeStamp(cam):
 
 
 def StreamCams(cam1, cam2):
-    cam1_rtsp_link = "rtsp://" + cam1['id'] + ':' + cam1['pass'] + '@' + cam1['ip'] + "/cam/realmonitor?channel=1&subtype=1"
-    cam2_rtsp_link = "rtsp://" + cam2['id'] + ':' + cam2['pass'] + '@' + cam2['ip'] + "/cam/realmonitor?channel=1&subtype=1"
+    cam1_rtsp_link = "rtsp://" + cam1['id'] + ':' + cam1['pass'] + '@' + cam1['ip'] + "/cam/realmonitor?channel=1&subtype=0"
+    cam2_rtsp_link = "rtsp://" + cam2['id'] + ':' + cam2['pass'] + '@' + cam2['ip'] + "/cam/realmonitor?channel=1&subtype=0"
 
     cap1 = cv2.VideoCapture(cam1_rtsp_link)
     cap2 = cv2.VideoCapture(cam2_rtsp_link)
@@ -49,16 +49,14 @@ def StreamCams(cam1, cam2):
         
         # Write the frame into the video file
         if ret1 and ret2:
+            out1.write(frame1)
+            out2.write(frame2)
+            #cv2.imshow('VIDEO FROM CAM1', frame1)
+            #cv2.imshow('VIDEO FROM CAM2', frame2)
             with open('out_timestamp1.csv', "a") as f1:
                 f1.write(str(datetime.datetime.now()) + '\n')
-            out1.write(frame1)
-            
             with open('out_timestamp2.csv', "a") as f2:
                 f2.write(str(datetime.datetime.now()) + '\n')
-            out2.write(frame2)
-
-        cv2.imshow('VIDEO FROM CAM1', frame1)
-        cv2.imshow('VIDEO FROM CAM2', frame2)
 
         #print('Cam1 Frame Timestamp:' + getFrameTimeStamp(cam1))
         #print('Cam2 Frame Timestamp:' + getFrameTimeStamp(cam2))
@@ -79,8 +77,8 @@ def StreamCams(cam1, cam2):
 def main():
     #to know the ip address go to the computer connected to the router and type routerlogin.net and check connecte devices 
     ## USERNAME : admin, PASSWORD: inr
-    cam1 = {'id' : 'admin', 'pass' : 'inrcamera1', 'ip' : '192.168.1.3:554'}
-    cam2 = {'id' : 'admin', 'pass' : 'inrcamera2', 'ip' : '192.168.1.2:554'}
+    cam1 = {'id' : 'admin', 'pass' : 'inrcamera1', 'ip' : '192.168.1.2:554'}
+    cam2 = {'id' : 'admin', 'pass' : 'inrcamera2', 'ip' : '192.168.1.3:554'}
 
     StreamCams(cam1, cam2)
     
@@ -89,6 +87,5 @@ def main():
     # window.title("Test app")
     # window.mainloop()
     
-
 if __name__ == '__main__':
     main()

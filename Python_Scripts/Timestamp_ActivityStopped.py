@@ -14,5 +14,5 @@ def stopStreaming():
     check_kill_process('/Python_Scripts/StartRecordingCams.py')
 
 if __name__ == '__main__':
-    stopStreaming()
+    #stopStreaming()
     ActivityStopped_writeTimestamp()
