@@ -2,6 +2,7 @@
 
 import cv2, requests, datetime, sys
 from tkinter import *
+from multiprocessing import Process
 
 def getFrameTimeStamp(cam):
     http_link = 'http://' + cam['ip'][:-4] +'/cgi-bin/global.cgi?action=getCurrentTime'
@@ -51,12 +52,15 @@ def StreamCams(cam1, cam2):
         if ret1 and ret2:
             out1.write(frame1)
             out2.write(frame2)
-            #cv2.imshow('VIDEO FROM CAM1', frame1)
-            #cv2.imshow('VIDEO FROM CAM2', frame2)
+
             with open('out_timestamp1.csv', "a") as f1:
                 f1.write(str(datetime.datetime.now())[:-4] + '\n')
             with open('out_timestamp2.csv', "a") as f2:
                 f2.write(str(datetime.datetime.now())[:-4] + '\n')
+                
+            #cv2.imshow('VIDEO FROM CAM1', frame1)
+            #cv2.imshow('VIDEO FROM CAM2', frame2)
+            
                 
         # Press Q on keyboard to stop recording
         if cv2.waitKey(1) & 0xFF == ord('q'):
