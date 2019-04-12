@@ -23,7 +23,7 @@ exports.activitystarted=function(req, res) {
 	res.render('activitystarted', {title:"Activity In Progress"});
 
 	const { spawn } = require('child_process');
-	const pyProg = spawn('python', ['./Python_Scripts/Timestamp_ActivityStarted.py']);
+	const pyProg = spawn('python', ['./Python_Scripts/StartRecordingCams.py']);
 	pyProg.stdout.on('data', function (data) {
 		console.log(data.toString());
 		res.write(data);
@@ -35,11 +35,6 @@ exports.thanks=function(req, res) {
 
 	const { spawn } = require('child_process');
 	const pyProg = spawn('python', ['./Python_Scripts/Timestamp_ActivityStopped.py']);
-	pyProg.stdout.on('data', function (data) {
-		console.log(data.toString());
-		res.write(data);
-		res.end('end');
-	});
 }
 exports.studyend=function(req, res) {
     res.render('studyend', {title:"Study Concluded"});
@@ -52,14 +47,6 @@ exports.instructions=function(req, res){
 }
 exports.conclusion=function(req, res){
 	res.render('conclusion', {title:"Conclusion"});
-
-	const { spawn } = require('child_process');
-	const pyProg = spawn('python', ['./Python_Scripts/StartRecordingCams.py']);
-	pyProg.stdout.on('data', function (data) {
-		console.log(data.toString());
-		res.write(data);
-		res.end('end');
-	});
 }
 exports.activityObject=function(req,res){
 	res.render('activityObject', {title:"Activity Object"});
@@ -78,6 +65,14 @@ exports.sitBack=function(req,res){
 }
 exports.exerciseScreen=function(req,res){
 	res.render('exerciseScreen', {title: "Exercise Screen"});
+	
+	const { spawn } = require('child_process');
+	const pyProg = spawn('python', ['./Python_Scripts/Timestamp_AppStarted.py']);
+	pyProg.stdout.on('data', function (data) {
+		console.log(data.toString());
+		res.write(data);
+		res.end('end');
+	});
 }
 exports.demoScreen=function(req,res){
 	res.render('demoScreen', {title: "Demo Screen"});

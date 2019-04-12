@@ -1,6 +1,6 @@
 #Need python 3.5, cv2 package (pip install opencv)
 
-import cv2, requests, datetime, sys
+import cv2, requests, datetime, sys, os
 from tkinter import *
 from multiprocessing import Process
 
@@ -12,7 +12,41 @@ def getFrameTimeStamp(cam):
     
     return res.text
 
+#Return a list of try no and Exercise no like this: [try_no, exercise no]
+def getTry_ExerciseNo():
+    videos_list = []
+    E_no = 1
+    T_no = 1
 
+    files = [f for f in os.listdir('.') if os.path.isfile(f)]
+    for f in files:
+        if ".avi" in str(f):
+            videos_list.append(str(f))
+
+    if len(videos_list) == 0:
+        return [str(1), "0" + str(1)]
+    
+    for f in videos_list:
+        if "Exercise0" in f:
+            if "Try" in f:
+                n = int(f[f.find("Try") + 3])
+                if T_no < n: 
+                    T_no = n
+            n = int(f[f.find("Exercise") + 8:f.find("Exercise") + 9])
+            if E_no < n: 
+                E_no = n
+
+    if T_no >= 4:
+        T_no = 1
+        E_no +=1
+    else:
+        T_no += 1    
+
+    if E_no <= 9:
+        return [str(T_no), "0" + str(E_no)]
+    else:
+        return [str(T_no), str(E_no)]
+    
 def StreamCams(cam1, cam2):
     cam1_rtsp_link = "rtsp://" + cam1['id'] + ':' + cam1['pass'] + '@' + cam1['ip'] + "/cam/realmonitor?channel=1&subtype=0"
     cam2_rtsp_link = "rtsp://" + cam2['id'] + ':' + cam2['pass'] + '@' + cam2['ip'] + "/cam/realmonitor?channel=1&subtype=0"
@@ -35,14 +69,18 @@ def StreamCams(cam1, cam2):
     cam2_frame_width = int(cap2.get(3))  # 1920 pixels
     cam2_frame_height = int(cap2.get(4))  # 1080 pixels
 
+    TE_no = getTry_ExerciseNo()
+    exercise_no = TE_no[1]
+    try_no = TE_no[0]
+
     # Define the codec and create VideoWriter object.The output is stored in the same folder as this script
-    out1 = cv2.VideoWriter('outputCam1.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 30, (cam1_frame_width,cam1_frame_height))
-    out2 = cv2.VideoWriter('outputCam2.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 30, (cam2_frame_width,cam2_frame_height))
+    out1 = cv2.VideoWriter('Exercise'+ exercise_no + 'Try'+ try_no + 'Cam1.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 30, (cam1_frame_width,cam1_frame_height))
+    out2 = cv2.VideoWriter('Exercise'+ exercise_no + 'Try'+ try_no + 'Cam2.avi', cv2.VideoWriter_fourcc('M','J','P','G'), 30, (cam2_frame_width,cam2_frame_height))
     f1 = open('out_timestamp1.csv', "w") # opening it once to erase the file 
     f2 = open('out_timestamp2.csv' ,"w") # opening it once to erase the file
     
-    with open('ActivityTimeStamps.csv',"w") as f3:#Creating a csv file where Activity Started and Activity Stopped time data will be written
-        f3.write("Cameras Started:," + str(datetime.datetime.now())[:-4] + '\n')
+    with open('ActivityTimeStamps.csv',"a") as f3:#Creating a csv file where Activity Started and Activity Stopped time data will be written
+        f3.write("Activity Started:," + str(datetime.datetime.now())[:-4] + '\n')
     
     while(1):
         ret1, frame1 = cap1.read()
@@ -52,7 +90,7 @@ def StreamCams(cam1, cam2):
         if ret1 and ret2:
             out1.write(frame1)
             out2.write(frame2)
-
+            
             with open('out_timestamp1.csv', "a") as f1:
                 f1.write(str(datetime.datetime.now())[:-4] + '\n')
             with open('out_timestamp2.csv', "a") as f2:
@@ -90,3 +128,5 @@ def main():
     
 if __name__ == '__main__':
     main()
+    #print(getTry_ExerciseNo())
+    
